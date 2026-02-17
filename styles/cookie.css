@@ -1,0 +1,22 @@
+.cookie-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: var(--COOKIE-PADDING-TO-COUNTER-BOTTOM);
+}
+
+.cookie {
+  width: var(--COOKIE-CLICK-SIZE);
+  height: var(--COOKIE-CLICK-SIZE);
+  object-fit: cover;
+ 
+  cursor: pointer;
+  outline: none;                 /* remove focus outline */
+  -webkit-tap-highlight-color: transparent; /* remove blue highlight on mobile */
+  transition: all 0.15 ease;
+}
+
+.cookie:active {
+  opacity: 0.8;
+}
+

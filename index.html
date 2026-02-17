@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/cookie.css">
+  <link rel="stylesheet" href="styles/shop.css">
+  <link rel="icon" href="icons/cookie.png">
+  <title>Cookie Click!</title>
+</head>
+<body class="back-color">
+<div class="page-container">
+
+  <header class="header">
+    <div class="logo-container">
+      <img class="logotype-icon" src="icons/cookie.png" alt="cookie logo">
+      <div class="header-names"><a class="links" href="#">Cookie Click</a></div>
+    </div>
+    <div class="header-money js-money-show">0 $</div>
+    <div class="header-names"><a class="links" href="#shop">Shop</a></div>
+  </header>
+
+  <main class="main">
+    <div class="title-container">
+      <div class="title-main">Click the cookie game</div>
+      <img class="click-icon-main" src="icons/click.png" alt="click">
+    </div>
+
+    <div class="cookie-container">
+      <div class="js-click"><img class="cookie" src="products-icon/main-first-icon.png" alt="cookie"></div>
+    </div>
+
+    <div class="clicks-div js-clicks-count-message"></div>
+
+    <div class="auto-button-container">
+
+     <div class="auto-item">
+        <button class="auto-clicker js-auto-cliker">
+          Auto Click
+        </button>
+
+        <div class="auto-click-power js-auto-click-message">
+          Auto clicker is OFF
+        </div>
+
+        <div class="autoclick-value">
+          1 click / 5s
+        </div>
+
+      </div>
+
+      <div class="auto-item">
+        <button class="conventor-money js-conventor">
+          Convert to $
+        </button>
+
+        <div class="message-confrirm js-message-convert-total"></div>
+
+         <div class="autoclick-value">
+          10 Cookies = 1$
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <section class="shop-article" id="shop">
+    <div class="title-container-shop">
+      <div class="title-main">Our Little Cookie Shop</div>
+      <img class="basket-icon-main" src="icons/basket.png" alt="basket">
+    </div>
+
+    <div class="catalog-container">
+
+    <div class="header-shop">
+      <div class="shop-catalog-titles js-tab active" data-category="cookies">
+        Cookies
+      </div>
+      <div class="shop-catalog-titles js-tab" data-category="auto clicker">
+        Auto Clicker
+      </div>
+    </div>
+
+      <div class="grid-shop js-products-grid scrollable-grid">
+
+      </div>
+
+  </section>
+
+  <footer class="footer">Cookie Click v1.01</footer>
+
+</div>
+  <script  src="scripts/click.js"></script>
+  <script type="module" src="scripts/shop.js"></script>
+</body>
+</html>

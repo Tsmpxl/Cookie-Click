@@ -1,0 +1,155 @@
+:root {
+  --CATALOG-CONTAINER-HEIGHT:25rem;
+  --CATALOG-CONTAINER-WIDTH:20rem;
+  --PADDING-SHOP-HEADER-NAMES: 0.8rem 3rem;
+  --SHOP-ICON-LOGO:1.8rem;
+  --TITLE-SHOP-PADDING-BOTTOm:3rem;
+  --GRID-PADDING-SHOP:1rem;
+  --GRID-TEMPLATE-SHOP: 1fr 1fr;
+  --GRID-GRAP:0.8rem;
+  --INSIDE-PRODUCTS-BOX-HEIGH:8.3rem;
+  --PRODUCT-IMAGE-SIZE:5rem;
+  --PADDING-INSIDE-PRODUCTS: 0.5rem;
+  --GRID-TEMPLATE-PRICE-NAME: 1fr 1fr;
+  --FONT-SIZE-PRODUCTS:12px;
+  --PLUS-CLICKS-FONT-SIZE:11px;
+  --CLICKS-TOP-POSITION:-90px;
+  --CLICKS-LEFT-POSITION:-5px;
+  --FONT-SIZE-PRICING-TAG:13px;
+  --PADDING-BEYWEEN-PRODUCT-NAME-PRICE:0.1rem 0;
+}
+
+.shop-article {
+  min-height: 80vh;
+
+  padding-top: var(--TO-TOP-PADDING-BODY);
+
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.3) ,rgba(0, 0, 0, 0.3)),
+    radial-gradient(circle, #a87c5a 10%, transparent 11%), 
+    radial-gradient(circle, #8a6b56 10%, transparent 11%); 
+  background-size: 80px 80px; 
+  background-position: 0 0, 40px 40px; 
+}
+
+.basket-icon-main {
+  width: var(--CLICK-ICON-SIZE);
+  height: var(--CLICK-ICON-SIZE);
+  position: absolute;
+  top:var(--BASKET-ICON-TOP) ;
+  right: var(--BASKET-ICON-RIGHT);
+}
+
+.catalog-container {
+  width: var(--CATALOG-CONTAINER-WIDTH);
+  height: var(--CATALOG-CONTAINER-HEIGHT);
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+.title-container-shop {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: var(--TITLE-SHOP-PADDING-BOTTOm);
+}
+
+.header-shop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--PADDING-SHOP-HEADER-NAMES);
+  background-color: #e0e0e0;
+  
+}
+
+.scrollable-grid {
+  flex: 1;                  /* take remaining height */
+  overflow-y: auto;         /* scroll only if products exceed height */
+  display: grid;
+  grid-template-columns: var(--GRID-TEMPLATE-SHOP);
+  gap: var(--GRID-GRAP);
+}
+
+.shop-catalog-titles {
+  font-weight: var(--FONT-WEIGHT);
+}
+
+
+.grid-shop{
+  z-index: 2;
+  padding: var(--GRID-PADDING-SHOP);
+  display: grid;
+  grid-template-columns: var(--GRID-TEMPLATE-SHOP);
+  gap:var(--GRID-GRAP);
+}
+
+.content-product {
+  height: var(--INSIDE-PRODUCTS-BOX-HEIGH);
+  background-color: rgb(211, 199, 199);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: var(--PADDING-INSIDE-PRODUCTS);
+  position: relative; /* needed for absolute overlay */
+  overflow: hidden;   /* prevents overlay from spilling out */
+
+}
+
+.content-product:active {
+  opacity: 0.7;
+}
+
+.product-shop-icon {
+  width: var(--PRODUCT-IMAGE-SIZE);
+  height: var(--PRODUCT-IMAGE-SIZE);
+}
+
+.grid-name-price-shop {
+
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--GRID-TEMPLATE-PRICE-NAME);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.product-shop-name,.product-shop-price{
+  font-size: var(--FONT-SIZE-PRODUCTS);
+  font-weight: var(--FONT-WEIGHT);
+  padding: var(--PADDING-BEYWEEN-PRODUCT-NAME-PRICE);
+
+}
+
+
+.plus-clicks {
+  font-size: var(--PLUS-CLICKS-FONT-SIZE);
+  font-weight: var(--FONT-WEIGHT);
+  position: absolute;
+  top: var(--CLICKS-TOP-POSITION);
+  left:var(--CLICKS-LEFT-POSITION);
+}
+
+.price-shop-name,
+.price-shop {
+  font-weight: var(--FONT-WEIGHT);
+  font-size: var(--FONT-SIZE-PRICING-TAG);
+}
+
+.shop-catalog-titles {
+  cursor: pointer;
+  transition: all 0.15s ease;
+  outline: none;                 /* remove focus outline */
+  -webkit-tap-highlight-color: transparent; /* remove blue highlight on mobile */
+}
+
+.shop-catalog-titles.active {
+  border-bottom: 1px solid black;
+  font-weight: bold;
+}
+
