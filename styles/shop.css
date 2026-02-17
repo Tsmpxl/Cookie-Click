@@ -17,10 +17,14 @@
   --CLICKS-LEFT-POSITION:-5px;
   --FONT-SIZE-PRICING-TAG:13px;
   --PADDING-BEYWEEN-PRODUCT-NAME-PRICE:0.1rem 0;
+
+  --BASKET-ICON-TOP:60px;
+  --BASKET-ICON-RIGHT:3.5rem;
 }
 
 .shop-article {
   min-height: 80vh;
+  padding-bottom: 4.5rem;
 
   padding-top: var(--TO-TOP-PADDING-BODY);
 
@@ -58,6 +62,7 @@
   align-items: center;
   justify-content: center;
   padding-bottom: var(--TITLE-SHOP-PADDING-BOTTOm);
+  padding-top: var(--TO-TOP-PADDING-BODY);
 }
 
 .header-shop {
@@ -153,3 +158,11 @@
   font-weight: bold;
 }
 
+.notification-shop {
+  font-weight: var(--FONT-WEIGHT);
+  color: rgb(114, 32, 32);
+  text-shadow: var(--TEXT-SHADOW);
+  padding-top: 1rem;
+  text-align: center;
+  font-size: var(--SMALL-FONT-SIZE);
+}

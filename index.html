@@ -7,10 +7,24 @@
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/cookie.css">
   <link rel="stylesheet" href="styles/shop.css">
+  <link rel="stylesheet" href="styles/media.css">
+  <link rel="stylesheet" href="styles/loading.css">
   <link rel="icon" href="icons/cookie.png">
   <title>Cookie Click!</title>
 </head>
 <body class="back-color">
+  <div id="loading-screen">
+    <div class="cookie-loading">
+      <div class="bite"></div>
+    </div>
+    <p class="loading-text">Baking cookies...</p>
+  </div>
+  <div class="not-visible">
+    <div class="cookie-container">
+      <img class="cookie-not-visible" src="products-icon/main-first-icon.png" alt="cookie">
+    </div>
+    <div class="not-visible-text">It only works on phone devises in Vertical Layout</div>
+  </div>
 <div class="page-container">
 
   <header class="header">
@@ -21,6 +35,9 @@
     <div class="header-money js-money-show">0 $</div>
     <div class="header-names"><a class="links" href="#shop">Shop</a></div>
   </header>
+
+  <button class="js-music-button music-button"><img class="music-icon" src="icons/music-icon.png" alt=""></button>
+  <audio class="js-audio" src="sounds/cookie-main-music.mp3"></audio>
 
   <main class="main">
     <div class="title-container">
@@ -76,25 +93,28 @@
 
     <div class="catalog-container">
 
-    <div class="header-shop">
-      <div class="shop-catalog-titles js-tab active" data-category="cookies">
-        Cookies
+      <div class="header-shop">
+        <div class="shop-catalog-titles js-tab active" data-category="cookies">
+          Cookies
+        </div>
+        <div class="shop-catalog-titles js-tab" data-category="auto clicker">
+          Auto Clicker
+        </div>
       </div>
-      <div class="shop-catalog-titles js-tab" data-category="auto clicker">
-        Auto Clicker
-      </div>
+
+      <div class="grid-shop js-products-grid scrollable-grid"></div>
     </div>
-
-      <div class="grid-shop js-products-grid scrollable-grid">
-
-      </div>
-
+   
+    <div class="notification-shop">Shop doesn't work at the moment. Coming Soon.</div>
   </section>
+    
 
   <footer class="footer">Cookie Click v1.01</footer>
 
 </div>
   <script  src="scripts/click.js"></script>
   <script type="module" src="scripts/shop.js"></script>
+  <script src="scripts/music.js"></script>
+  <script src="scripts/loading.js"></script>
 </body>
 </html>

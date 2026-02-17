@@ -1,0 +1,79 @@
+#loading-screen {
+  position: fixed;
+  inset: 0;
+  background: #fff8f0;
+  z-index: 99999999999999999999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Cookie */
+.cookie-loading {
+  width: 100px;
+  height: 100px;
+  background: #d2691e;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: inset -10px -10px 0 rgba(0,0,0,0.15);
+  animation: rotateCookie 3s linear infinite;
+  overflow: hidden;
+}
+
+/* Chocolate chips */
+.cookie-loading::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #3e2723;
+  border-radius: 50%;
+  top: 25px;
+  left: 20px;
+  box-shadow:
+    30px 10px #3e2723,
+    15px 35px #3e2723,
+    45px 40px #3e2723,
+    60px 25px #3e2723;
+}
+
+/* REAL bite inside cookie */
+.bite {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background: #fff8f0; /* Same as background */
+  border-radius: 50%;
+  top: -5px;
+  right: -5px;
+  animation: biteAnim 3s infinite;
+}
+
+/* Text */
+.loading-text {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #5a3e2b;
+  animation: fade 1.5s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes rotateCookie {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes biteAnim {
+  0%, 40%, 100% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade {
+  0%,100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}

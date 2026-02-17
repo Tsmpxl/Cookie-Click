@@ -1,0 +1,38 @@
+@media screen and (min-width: 768px) { 
+  .back-color {
+   
+    background: none;
+  }
+  .shop-article {
+    background: none;
+  }
+  .not-visible {
+    z-index: 99999999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+  }
+  .logotype-icon {
+    z-index:999999991;
+  }
+
+  .cookie-not-visible {
+  padding-top: 2rem;
+  display: block;
+  width: var(--COOKIE-CLICK-SIZE);
+  height: var(--COOKIE-CLICK-SIZE);
+  object-fit: cover;
+  transition: all 0.15 ease;
+}
+
+.not-visible-text {
+  display: block;
+  color: white;
+  padding-top: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+}

@@ -14,11 +14,19 @@ function saveToStorage() {
 // IT SHOWS THE SAVED CLICKES WHEN YOU GO TO THE PAGE
   updateMessage();
 
+const clickSound = new Audio('sounds/click.mp3');
+function clickPlay() {
+    clickSound.currentTime = 0.45;
+    clickSound.volume = 0.65; 
+    clickSound.play();
+};
+
 
 // EVERY CLICK IS PLUS 1 , KATHE CLICK EINAI ENA CLICK
 myButton.addEventListener('click', () => {
     buttonClicks++;
-    
+
+    clickPlay();
     // KANEI SAVE TO UPDATED COUNT STO LOCALSTORAGE
     saveToStorage();
 
@@ -42,6 +50,7 @@ autoButtonEl.addEventListener('click' , () => {
       buttonClicks++;
       saveToStorage();
       updateMessage();
+      clickPlay();
   }, 5000);
   
   } else {

@@ -12,7 +12,7 @@
   --PAD-BETWEEN-HEADER-TITLES: 0 1.5rem;
   --FONT-HEADER-SIZE: 1.1rem;
   --FONT-WEIGHT: bold;
-  --TO-TOP-PADDING-BODY: 5rem;
+  --TO-TOP-PADDING-BODY: var(--HEADER-SIZE);
   --TITLE-MAIN-SIZE: 1.6rem;
   --CLICK-ICON-SIZE: 2rem;
   --TOP-POSITION-CLICK-ICON: 15px;
@@ -25,8 +25,7 @@
   --COOKIE-MESSAGE-LEFT-RIGHT-PADDING: 0 5px;
   --PAD-SHOP-MESSAGE:1rem;
 
-  --BASKET-ICON-TOP:1.2rem;
-  --BASKET-ICON-RIGHT:3.5rem;
+
 
   --COOKIE-CLICK-SIZE: 200px;
   --AUTO-CLICKER-BUTTON-WIDTH:8rem;
@@ -40,6 +39,7 @@
   --CLICK-VALUE-MESSAGE-PAD-TOP:0.5rem;  
 
   --FOOTER-PADDING:0.3rem;
+  --MUSIC-ICON-SIZE:2rem;
 
 }
 
@@ -66,6 +66,7 @@ body {
 
 .main {
   min-height: 80vh;
+  padding-bottom: 4rem;
 }
 
 .header {
@@ -83,6 +84,27 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: var(--PAD-BETWEEN-HEADER-TITLES);
+}
+
+.music-button {
+  border: none;
+  background-color: transparent;
+  font-weight: var(--FONT-WEIGHT);
+  width: var(--MUSIC-ICON-SIZE);
+  height: var(--MUSIC-ICON-SIZE);
+  position: absolute;
+  top: calc(var(--HEADER-SIZE) + 5px);
+  right: 1.5rem;
+}
+
+.music-icon {
+  width: var(--MUSIC-ICON-SIZE);
+  height: var(--MUSIC-ICON-SIZE);
+  object-fit: cover;
+}
+
+.music-icon:active {
+  opacity: 0.4;
 }
 
 .logo-container {
@@ -235,4 +257,8 @@ body {
   background-color: rgb(0, 0, 0,0.05);
   backdrop-filter: blur(5px);
   text-shadow: var(--TEXT-SHADOW);
+}
+
+.cookie-not-visible,.not-visible-text{
+  display: none;
 }
